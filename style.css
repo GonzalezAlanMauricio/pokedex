@@ -21,10 +21,10 @@ nav {
 
 .logo {
   font-size: 2.4rem;
-  color: #DDB01B;
+  color: #ddb01b;
   margin: 1rem;
   font-family: "Anton", sans-serif;
-  text-shadow: 0.1rem 0.3rem 0.4rem #2F4774;
+  text-shadow: 0.1rem 0.3rem 0.4rem #2f4774;
 }
 
 form {
@@ -85,13 +85,15 @@ form input:focus {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 .card-group {
   height: 40%;
   display: flex;
   flex-wrap: wrap;
-  flex: 50%;
+  flex: 30%;
+  border: 3px solid #ddb01b;
 }
 .card {
   margin-top: 1rem;
@@ -116,9 +118,19 @@ form input:focus {
 }
 
 .card p {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Piedra", cursive;
 }
+
+
+
+
+@media screen and (max-width: 1300px) {
+  .card-group {
+    flex: 90%;
+  }
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -166,44 +178,51 @@ footer {
 }
 
 .flip-card {
-  margin: 0;
   display: flex;
   flex-direction: row;
-  height: 225;
-  width: 330;
+  margin: auto;
+  height: 200;
+  width: 300;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.flip-inner{
+.flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  margin: 1rem;
 }
 
 .flip-card:hover .flip-inner {
   transform: rotateY(180deg);
 }
 
+.front {
+  height: 100%;
+  width: 100%;
+}
 
 .back {
   position: absolute;
   top: 0;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-}
-
-.back {
   background-color: blue;
   height: 100%;
   width: 100%;
   transform: rotateY(180deg);
 }
 
+.water {
+  border: 0.5rem solid #6890f0;
+}
+.water-back {
+  background-color: #6890f0;
+}
 
-
-.water{
-  border: 1rem solid #6890F0 ;
+.info-list {
+  background-color: #6890f0;
 }
