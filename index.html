@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="./ico/Pokemon.ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Pokedex </title>
 </head>
 
@@ -29,6 +30,33 @@
     </nav>
   </head>
   <main>
+
+    <div class="more-info">
+
+      <div class="background-more-info water">
+        <div class="top-more-info">
+          <img class="img-more-info water" src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+          <p class="description-more-info">A Bulbasaur es fácil verle echándose una siesta al sol. La semilla que tiene
+            en el lomo va creciendo cada vez
+            más a medida que absorbe los rayos del sol. Después de nacer, crece alimentándose de las semillas de su
+            lomo.
+            Una rara semilla le fue plantada en el lomo al nacer.
+          </p>
+        </div>
+        <div class="bottom-more-info">
+          <p class="evolution">Evoluciona:</p>
+          <div class="sprites">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="pokemon"
+              class="sprite">
+            <p class="arrow">&rarr;</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png" alt="pokemon"
+              class="sprite">
+          </div>
+        </div>
+        <p class="close-more-info">X</p>
+      </div>
+    </div>
+
     <div class="container-of-pokemon">
 
       <div class="card-group">
@@ -36,7 +64,7 @@
         <div class="flip-card">
           <div class="flip-inner">
             <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
               <div class="info-list">
                 <p class="info">Id: #01</p>
                 <p class="info">Nombre: Bulbasur</p>
@@ -48,6 +76,7 @@
               <p class="info">Tipo:planta</p>
               <p class="info">Nombre: Bulbasur</p>
               <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
             </div>
           </div>
         </div>
@@ -55,7 +84,7 @@
         <div class="flip-card">
           <div class="flip-inner">
             <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
               <div class="info-list">
                 <p class="info">Id: #01</p>
                 <p class="info">Nombre: Bulbasur</p>
@@ -67,13 +96,14 @@
               <p class="info">Tipo:planta</p>
               <p class="info">Nombre: Bulbasur</p>
               <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
             </div>
           </div>
         </div>
         <div class="flip-card">
           <div class="flip-inner">
             <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
               <div class="info-list">
                 <p class="info">Id: #01</p>
                 <p class="info">Nombre: Bulbasur</p>
@@ -85,13 +115,14 @@
               <p class="info">Tipo:planta</p>
               <p class="info">Nombre: Bulbasur</p>
               <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
             </div>
           </div>
         </div>
         <div class="flip-card">
           <div class="flip-inner">
             <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
               <div class="info-list">
                 <p class="info">Id: #01</p>
                 <p class="info">Nombre: Bulbasur</p>
@@ -103,13 +134,14 @@
               <p class="info">Tipo:planta</p>
               <p class="info">Nombre: Bulbasur</p>
               <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
             </div>
           </div>
         </div>
         <div class="flip-card">
           <div class="flip-inner">
             <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
               <div class="info-list">
                 <p class="info">Id: #01</p>
                 <p class="info">Nombre: Bulbasur</p>
@@ -121,119 +153,7 @@
               <p class="info">Tipo:planta</p>
               <p class="info">Nombre: Bulbasur</p>
               <p class="info">Tipo: Planta</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
-              <div class="info-list">
-                <p class="info">Id: #01</p>
-                <p class="info">Nombre: Bulbasur</p>
-                <p class="info">Tipo: Planta</p>
-              </div>
-            </div>
-            <div class="card back water-back">
-              <p class="info">Altura: 33</p>
-              <p class="info">Tipo:planta</p>
-              <p class="info">Nombre: Bulbasur</p>
-              <p class="info">Tipo: Planta</p>
-            </div>
-          </div>
-        </div>
-
-        
-
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
-              <div class="info-list">
-                <p class="info">Id: #01</p>
-                <p class="info">Nombre: Bulbasur</p>
-                <p class="info">Tipo: Planta</p>
-              </div>
-            </div>
-            <div class="card back water-back">
-              <p class="info">Altura: 33</p>
-              <p class="info">Tipo:planta</p>
-              <p class="info">Nombre: Bulbasur</p>
-              <p class="info">Tipo: Planta</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
-              <div class="info-list">
-                <p class="info">Id: #01</p>
-                <p class="info">Nombre: Bulbasur</p>
-                <p class="info">Tipo: Planta</p>
-              </div>
-            </div>
-            <div class="card back water-back">
-              <p class="info">Altura: 33</p>
-              <p class="info">Tipo:planta</p>
-              <p class="info">Nombre: Bulbasur</p>
-              <p class="info">Tipo: Planta</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
-              <div class="info-list">
-                <p class="info">Id: #01</p>
-                <p class="info">Nombre: Bulbasur</p>
-                <p class="info">Tipo: Planta</p>
-              </div>
-            </div>
-            <div class="card back water-back">
-              <p class="info">Altura: 33</p>
-              <p class="info">Tipo:planta</p>
-              <p class="info">Nombre: Bulbasur</p>
-              <p class="info">Tipo: Planta</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
-              <div class="info-list">
-                <p class="info">Id: #01</p>
-                <p class="info">Nombre: Bulbasur</p>
-                <p class="info">Tipo: Planta</p>
-              </div>
-            </div>
-            <div class="card back water-back">
-              <p class="info">Altura: 33</p>
-              <p class="info">Tipo:planta</p>
-              <p class="info">Nombre: Bulbasur</p>
-              <p class="info">Tipo: Planta</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="flip-card">
-          <div class="flip-inner">
-            <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
-              <div class="info-list">
-                <p class="info">Id: #01</p>
-                <p class="info">Nombre: Bulbasur</p>
-                <p class="info">Tipo: Planta</p>
-              </div>
-            </div>
-            <div class="card back water-back">
-              <p class="info">Altura: 33</p>
-              <p class="info">Tipo:planta</p>
-              <p class="info">Nombre: Bulbasur</p>
-              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
             </div>
           </div>
         </div>
@@ -241,7 +161,7 @@
         <div class="flip-card">
           <div class="flip-inner">
             <div class="card front water">
-              <img src="https://pokeres.bastionbot.org/images/pokemon/9.png" class="pokemon">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
               <div class="info-list">
                 <p class="info">Id: #01</p>
                 <p class="info">Nombre: Bulbasur</p>
@@ -253,6 +173,126 @@
               <p class="info">Tipo:planta</p>
               <p class="info">Nombre: Bulbasur</p>
               <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="card front water">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+              <div class="info-list">
+                <p class="info">Id: #01</p>
+                <p class="info">Nombre: Bulbasur</p>
+                <p class="info">Tipo: Planta</p>
+              </div>
+            </div>
+            <div class="card back water-back">
+              <p class="info">Altura: 33</p>
+              <p class="info">Tipo:planta</p>
+              <p class="info">Nombre: Bulbasur</p>
+              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="card front water">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+              <div class="info-list">
+                <p class="info">Id: #01</p>
+                <p class="info">Nombre: Bulbasur</p>
+                <p class="info">Tipo: Planta</p>
+              </div>
+            </div>
+            <div class="card back water-back">
+              <p class="info">Altura: 33</p>
+              <p class="info">Tipo:planta</p>
+              <p class="info">Nombre: Bulbasur</p>
+              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="card front water">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+              <div class="info-list">
+                <p class="info">Id: #01</p>
+                <p class="info">Nombre: Bulbasur</p>
+                <p class="info">Tipo: Planta</p>
+              </div>
+            </div>
+            <div class="card back water-back">
+              <p class="info">Altura: 33</p>
+              <p class="info">Tipo:planta</p>
+              <p class="info">Nombre: Bulbasur</p>
+              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="card front water">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+              <div class="info-list">
+                <p class="info">Id: #01</p>
+                <p class="info">Nombre: Bulbasur</p>
+                <p class="info">Tipo: Planta</p>
+              </div>
+            </div>
+            <div class="card back water-back">
+              <p class="info">Altura: 33</p>
+              <p class="info">Tipo:planta</p>
+              <p class="info">Nombre: Bulbasur</p>
+              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="card front water">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+              <div class="info-list">
+                <p class="info">Id: #01</p>
+                <p class="info">Nombre: Bulbasur</p>
+                <p class="info">Tipo: Planta</p>
+              </div>
+            </div>
+            <div class="card back water-back">
+              <p class="info">Altura: 33</p>
+              <p class="info">Tipo:planta</p>
+              <p class="info">Nombre: Bulbasur</p>
+              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="card front water">
+              <img src="https://pokeres.bastionbot.org/images/pokemon/23.png" class="pokemon">
+              <div class="info-list">
+                <p class="info">Id: #01</p>
+                <p class="info">Nombre: Bulbasur</p>
+                <p class="info">Tipo: Planta</p>
+              </div>
+            </div>
+            <div class="card back water-back">
+              <p class="info">Altura: 33</p>
+              <p class="info">Tipo:planta</p>
+              <p class="info">Nombre: Bulbasur</p>
+              <p class="info">Tipo: Planta</p>
+              <a onclick="showMoreInfo()" class="a-more-info" href="#">Ver más</a>
             </div>
           </div>
         </div>
@@ -268,6 +308,9 @@
     <p class="paginador ">&lt;</p>
     <p class="paginador "> &gt;</p>
   </footer>
+
+  <script src="script.js"></script>
+
 
 </body>
 

@@ -1,0 +1,3 @@
+const showMoreInfo = () => {
+  alert("hola");
+}
