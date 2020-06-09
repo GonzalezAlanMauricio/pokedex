@@ -278,25 +278,186 @@ footer {
   transform: rotateY(180deg);
 }
 
-
-
-.a-more-info{
+.a-more-info {
+  margin: 0;
   font-size: 2rem;
   position: absolute;
   bottom: 0;
   margin: 0;
   font-family: "Piedra", cursive;
   color: black;
-
 }
 
 .water {
   border: 0.5rem solid #6890f0;
 }
+.normal {
+  border: 0.5rem solid #7c746e;
+}
+.bug {
+  border: 0.5rem solid #a8b820;
+}
+.figth {
+  border: 0.5rem solid #BC221D;
+}
+.ghost {
+  border: 0.5rem solid #715799;
+}
+.electric {
+  border: 0.5rem solid #F9D02D;
+}
+.flying {
+  border: 0.5rem solid #AB92F8;
+}
+.steel {
+  border: 0.5rem solid #D1CFE2;
+}
+.psychc {
+  border: 0.5rem solid #F95788;
+}
+.posion {
+  border: 0.5rem solid #A73BA8;
+}
+.fire {
+  border: 0.5rem solid #EF8030;
+}
+.ice {
+  border: 0.5rem solid #98D9D9;
+}
+.ground {
+  border: 0.5rem solid #E2C167;
+}
+.dragon {
+  border: 0.5rem solid #6F35FE;
+}
+.rock {
+  border: 0.5rem solid #B9A038;
+}
+.grass {
+  border: 0.5rem solid #7CD051;
+}
+.dark {
+  border: 0.5rem solid #715B49;
+}
 .water-back {
   background-color: #6890f0;
 }
 
-.info-list {
+
+.missing{
+  border: 0.5rem solid black;
+}
+
+.missing-back{
+  background-color:  white;
+}
+
+.info-list-missing{
+  background-color: red;
+}
+
+
+.normal-back {
+  background-color: #7c746e;
+}
+.bug-back {
+  background-color: #a8b820;
+}
+.figth-back {
+  background-color: #BC221D;
+}
+.ghost-back {
+  background-color: #715799;
+}
+.electric-back {
+  background-color: #F9D02D;
+}
+.flying-back {
+  background-color: #AB92F8;
+}
+.steel-back {
+  background-color: #D1CFE2;
+}
+.psychc-back {
+  background-color: #F95788;
+}
+.posion-back {
+  background-color: #A73BA8;
+}
+.fire-back {
+  background-color: #EF8030;
+}
+.ice-back {
+  background-color: #98D9D9;
+}
+.ground-back {
+  background-color: #E2C167;
+}
+.dragon-back {
+  background-color: #6F35FE;
+}
+.rock-back {
+  background-color: #B9A038;
+}
+.grass-back {
+  background-color: #7CD051;
+}
+.dark-back {
+  background-color: #715B49;
+}
+
+.info-list-water {
   background-color: #6890f0;
+}
+
+
+
+
+.info-list-normal{
+  background-color: #7c746e;
+}
+.info-list-bug{
+  background-color: #a8b820;
+}
+.info-list-figth{
+  background-color: #BC221D;
+}
+.info-list-ghost{
+  background-color: #715799;
+}
+.info-list-electric{
+  background-color: #F9D02D;
+}
+.info-list-flying{
+  background-color: #AB92F8;
+}
+.info-list-steel{
+  background-color: #D1CFE2;
+}
+.info-list-psychc{
+  background-color: #F95788;
+}
+.info-list-posion{
+  background-color: #A73BA8;
+}
+.info-list-fire{
+  background-color: #EF8030;
+}
+.info-list-ice{
+  background-color: #98D9D9;
+}
+.info-list-ground{
+  background-color: #E2C167;
+}
+.info-list-dragon{
+  background-color: #6F35FE;
+}
+.info-list-rock{
+  background-color: #B9A038;
+}
+.info-list-grass{
+  background-color: #7CD051;
+}
+.info-list-dark{
+  background-color: #715B49;
 }
