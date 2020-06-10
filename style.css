@@ -236,7 +236,7 @@ footer {
 }
 .paginador:hover {
   cursor: pointer;
-  color: #3598db;
+  color: #ef5350;
 }
 
 .flip-card {
@@ -315,7 +315,7 @@ footer {
 .psychc {
   border: 0.5rem solid #F95788;
 }
-.posion {
+.poison {
   border: 0.5rem solid #A73BA8;
 }
 .fire {
@@ -339,6 +339,10 @@ footer {
 .dark {
   border: 0.5rem solid #715B49;
 }
+.fairy{
+  border: 0.5rem solid #FBB0FF;
+}
+
 .water-back {
   background-color: #6890f0;
 }
@@ -353,9 +357,12 @@ footer {
 }
 
 .info-list-missing{
-  background-color: red;
+  background-color: black;
 }
 
+.fairy-back{
+  background-color: #FBB0FF;
+}
 
 .normal-back {
   background-color: #7c746e;
@@ -381,7 +388,7 @@ footer {
 .psychc-back {
   background-color: #F95788;
 }
-.posion-back {
+.poison-back {
   background-color: #A73BA8;
 }
 .fire-back {
@@ -411,7 +418,9 @@ footer {
 }
 
 
-
+.info-list-fairy{
+  background-color: #FBB0FF;
+}
 
 .info-list-normal{
   background-color: #7c746e;
@@ -437,7 +446,7 @@ footer {
 .info-list-psychc{
   background-color: #F95788;
 }
-.info-list-posion{
+.info-list-poison{
   background-color: #A73BA8;
 }
 .info-list-fire{
