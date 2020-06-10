@@ -14,21 +14,30 @@ $(document).ready(function () {
 
 
 
-  getMultiplePokemon(131, 145)
-    .then(data => pokemonInformation(data, 131))
+  getMultiplePokemon(79)
+    .then(data => pokemonInformation(data))
 
 
 
 });
 
-const pokemonInformation = (arrayOfPokemonObj, startIndex) => {
+const nextPokemon = (id) => {
+  getMultiplePokemon(id + 12)
+    .then(data => pokemonInformation(data))
+}
+
+const pokemonInformation = (arrayOfPokemonObj) => {
+  startIndex = arrayOfPokemonObj[0].id;
   $(".pokemon-id").map(function (index) {
     index += startIndex;
     this.innerText = `Id: #${index <= 9 ? '0' + index : index}`
   })
-  $(".card img").map(function (index) { $(this).attr('src', `https://pokeres.bastionbot.org/images/pokemon/${startIndex + index}.png`) })
+  $(".card.front img").map(function (index) { $(this).attr('src', `https://pokeres.bastionbot.org/images/pokemon/${startIndex + index}.png`) })
+  $(".img-shiny img").map(function (index) { $(this).attr('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${startIndex + index}.png`) })
   $(".pokemon-name").map(function (index) { this.innerText = arrayOfPokemonObj[index].name })
-  $(".pokemon-type").map(function (index) { this.innerText = `Tipo: ${arrayOfPokemonObj[index].types[0].type.name}`})
+  $(".pokemon-height").map(function (index) { this.innerText = `Altura: ${arrayOfPokemonObj[index].height}cm` })
+  $(".pokemon-weight").map(function (index) { this.innerText = `Peso: ${arrayOfPokemonObj[index].weight * 100}gr` })
+  $(".pokemon-type").map(function (index) { this.innerText = `Tipo: ${arrayOfPokemonObj[index].types[0].type.name}` })
   $(".card.front").map(function (index) { $(this).addClass(arrayOfPokemonObj[index].types[0].type.name).removeClass("missing") })
   $(".card.back").map(function (index) { $(this).addClass(`${arrayOfPokemonObj[index].types[0].type.name}-back`).removeClass("missing-back") })
   $(".info-list-missing").map(function (index) { $(this).addClass(`info-list-${arrayOfPokemonObj[index].types[0].type.name}`).removeClass(".info-list-missing") })
@@ -41,7 +50,8 @@ const getPokemon = (id) => {
 
 }
 
-const getMultiplePokemon = (startIndex, endIndex) => {
+const getMultiplePokemon = (startIndex) => {
+  endIndex = startIndex + 12;
   const pokemon12 = [...Array(endIndex - startIndex + 1).keys()].map(number => getPokemon(number + startIndex));
   return Promise.all(pokemon12)
     .then(response => response);
@@ -51,4 +61,3 @@ const getMultiplePokemon = (startIndex, endIndex) => {
 const showMoreInfo = () => {
   alert("hola");
 }
-  //cargar las primeras imagenes

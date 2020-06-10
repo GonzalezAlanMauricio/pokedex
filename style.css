@@ -278,6 +278,11 @@ footer {
   transform: rotateY(180deg);
 }
 
+.img-shiny img{
+  height: auto;
+  width: 9rem;
+}
+
 .a-more-info {
   margin: 0;
   font-size: 2rem;
@@ -297,71 +302,70 @@ footer {
 .bug {
   border: 0.5rem solid #a8b820;
 }
-.figth {
-  border: 0.5rem solid #BC221D;
+.fighting {
+  border: 0.5rem solid #bc221d;
 }
 .ghost {
   border: 0.5rem solid #715799;
 }
 .electric {
-  border: 0.5rem solid #F9D02D;
+  border: 0.5rem solid #f9d02d;
 }
 .flying {
-  border: 0.5rem solid #AB92F8;
+  border: 0.5rem solid #ab92f8;
 }
 .steel {
-  border: 0.5rem solid #D1CFE2;
+  border: 0.5rem solid #d1cfe2;
 }
 .psychc {
-  border: 0.5rem solid #F95788;
+  border: 0.5rem solid #f95788;
 }
 .poison {
-  border: 0.5rem solid #A73BA8;
+  border: 0.5rem solid #a73ba8;
 }
 .fire {
-  border: 0.5rem solid #EF8030;
+  border: 0.5rem solid #ef8030;
 }
 .ice {
-  border: 0.5rem solid #98D9D9;
+  border: 0.5rem solid #98d9d9;
 }
 .ground {
-  border: 0.5rem solid #E2C167;
+  border: 0.5rem solid #e2c167;
 }
 .dragon {
-  border: 0.5rem solid #6F35FE;
+  border: 0.5rem solid #6f35fe;
 }
 .rock {
-  border: 0.5rem solid #B9A038;
+  border: 0.5rem solid #b9a038;
 }
 .grass {
-  border: 0.5rem solid #7CD051;
+  border: 0.5rem solid #7cd051;
 }
 .dark {
-  border: 0.5rem solid #715B49;
+  border: 0.5rem solid #715b49;
 }
-.fairy{
-  border: 0.5rem solid #FBB0FF;
+.fairy {
+  border: 0.5rem solid #fbb0ff;
 }
 
 .water-back {
   background-color: #6890f0;
 }
 
-
-.missing{
+.missing {
   border: 0.5rem solid black;
 }
 
-.missing-back{
-  background-color:  white;
+.missing-back {
+  background-color: white;
 }
 
-.info-list-missing{
+.info-list-missing {
   background-color: black;
 }
 
-.fairy-back{
-  background-color: #FBB0FF;
+.fairy-back {
+  background-color: #fbb0ff;
 }
 
 .normal-back {
@@ -370,103 +374,102 @@ footer {
 .bug-back {
   background-color: #a8b820;
 }
-.figth-back {
-  background-color: #BC221D;
+.fighting-back {
+  background-color: #bc221d;
 }
 .ghost-back {
   background-color: #715799;
 }
 .electric-back {
-  background-color: #F9D02D;
+  background-color: #f9d02d;
 }
 .flying-back {
-  background-color: #AB92F8;
+  background-color: #ab92f8;
 }
 .steel-back {
-  background-color: #D1CFE2;
+  background-color: #d1cfe2;
 }
 .psychc-back {
-  background-color: #F95788;
+  background-color: #f95788;
 }
 .poison-back {
-  background-color: #A73BA8;
+  background-color: #a73ba8;
 }
 .fire-back {
-  background-color: #EF8030;
+  background-color: #ef8030;
 }
 .ice-back {
-  background-color: #98D9D9;
+  background-color: #98d9d9;
 }
 .ground-back {
-  background-color: #E2C167;
+  background-color: #e2c167;
 }
 .dragon-back {
-  background-color: #6F35FE;
+  background-color: #6f35fe;
 }
 .rock-back {
-  background-color: #B9A038;
+  background-color: #b9a038;
 }
 .grass-back {
-  background-color: #7CD051;
+  background-color: #7cd051;
 }
 .dark-back {
-  background-color: #715B49;
+  background-color: #715b49;
 }
 
 .info-list-water {
   background-color: #6890f0;
 }
 
-
-.info-list-fairy{
-  background-color: #FBB0FF;
+.info-list-fairy {
+  background-color: #fbb0ff;
 }
 
-.info-list-normal{
+.info-list-normal {
   background-color: #7c746e;
 }
-.info-list-bug{
+.info-list-bug {
   background-color: #a8b820;
 }
-.info-list-figth{
-  background-color: #BC221D;
+.info-list-fighting {
+  background-color: #bc221d;
 }
-.info-list-ghost{
+.info-list-ghost {
   background-color: #715799;
 }
-.info-list-electric{
-  background-color: #F9D02D;
+.info-list-electric {
+  background-color: #f9d02d;
 }
-.info-list-flying{
-  background-color: #AB92F8;
+.info-list-flying {
+  background-color: #ab92f8;
 }
-.info-list-steel{
-  background-color: #D1CFE2;
+.info-list-steel {
+  background-color: #d1cfe2;
 }
-.info-list-psychc{
-  background-color: #F95788;
+.info-list-psychc {
+  background-color: #f95788;
 }
-.info-list-poison{
-  background-color: #A73BA8;
+.info-list-poison {
+  background-color: #a73ba8;
 }
-.info-list-fire{
-  background-color: #EF8030;
+.info-list-fire {
+  background-color: #ef8030;
 }
-.info-list-ice{
-  background-color: #98D9D9;
+.info-list-ice {
+  background-color: #98d9d9;
 }
-.info-list-ground{
-  background-color: #E2C167;
+.info-list-ground {
+  background-color: #e2c167;
 }
-.info-list-dragon{
-  background-color: #6F35FE;
+.info-list-dragon {
+  background-color: #6f35fe;
 }
-.info-list-rock{
-  background-color: #B9A038;
+.info-list-rock {
+  background-color: #b9a038;
 }
-.info-list-grass{
-  background-color: #7CD051;
+.info-list-grass {
+  background-color: #7cd051;
 }
-.info-list-dark{
-  background-color: #715B49;
+.info-list-dark {
+  background-color: #715b49;
 }
