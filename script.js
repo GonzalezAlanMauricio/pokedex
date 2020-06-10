@@ -6,14 +6,16 @@ agregar funcionalidad para cambiar los 12 mostrados
 agregar more-info
 agregar funcionalidad de buscar por id (errores)
 agregar funcionalidad de buscar por nombre (errores)
+orevisar type types son los mismos
 recorrer los 150 pokemon
+arreglar el coso ese que agrega px al back
  */
 $(document).ready(function () {
 
 
 
-  getMultiplePokemon(25, 37)
-    .then(data => pokemonInformation(data, 25))
+  getMultiplePokemon(131, 145)
+    .then(data => pokemonInformation(data, 131))
 
 
 
@@ -26,10 +28,10 @@ const pokemonInformation = (arrayOfPokemonObj, startIndex) => {
   })
   $(".card img").map(function (index) { $(this).attr('src', `https://pokeres.bastionbot.org/images/pokemon/${startIndex + index}.png`) })
   $(".pokemon-name").map(function (index) { this.innerText = arrayOfPokemonObj[index].name })
-  $(".pokemon-type").map(function (index) { this.innerText = `Tipo: ${arrayOfPokemonObj[index].types[0].type.name || arrayOfPokemonObj[index].types[0].type.name}`})
-  $(".card.front").map(function (index) { $(this).addClass(arrayOfPokemonObj[index].types[0].type.name || arrayOfPokemonObj[index].types[0].type.name).removeClass("missing") })
-  $(".card.back").map(function (index) { $(this).addClass(`${arrayOfPokemonObj[index].types[0].type.name || arrayOfPokemonObj[index].types[0].type.name}-back`).removeClass("missing-back") })
-  $(".info-list-missing").map(function (index) { $(this).addClass(`info-list-${arrayOfPokemonObj[index].types[0].type.name || arrayOfPokemonObj[index].types[0].type.name}`).removeClass(".info-list-missing") })
+  $(".pokemon-type").map(function (index) { this.innerText = `Tipo: ${arrayOfPokemonObj[index].types[0].type.name}`})
+  $(".card.front").map(function (index) { $(this).addClass(arrayOfPokemonObj[index].types[0].type.name).removeClass("missing") })
+  $(".card.back").map(function (index) { $(this).addClass(`${arrayOfPokemonObj[index].types[0].type.name}-back`).removeClass("missing-back") })
+  $(".info-list-missing").map(function (index) { $(this).addClass(`info-list-${arrayOfPokemonObj[index].types[0].type.name}`).removeClass(".info-list-missing") })
 }
 
 
