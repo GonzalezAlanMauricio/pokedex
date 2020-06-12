@@ -317,7 +317,7 @@ footer {
 .steel {
   border: 0.5rem solid #d1cfe2;
 }
-.psychc {
+.psychic {
   border: 0.5rem solid #f95788;
 }
 .poison {
@@ -389,7 +389,7 @@ footer {
 .steel-back {
   background-color: #d1cfe2;
 }
-.psychc-back {
+.psychic-back {
   background-color: #f95788;
 }
 .poison-back {
@@ -446,7 +446,7 @@ footer {
 .info-list-steel {
   background-color: #d1cfe2;
 }
-.info-list-psychc {
+.info-list-psychic {
   background-color: #f95788;
 }
 .info-list-poison {
