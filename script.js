@@ -1,16 +1,3 @@
-/*
-to do:
-
-                            cambiar el back
-              agregar funcionalidad para cambiar los pokemonInTheWeb mostrados
-                        agregar more-info
-agregar funcionalidad de buscar por id (errores)
-agregar funcionalidad de buscar por nombre (errores)
-                orevisar type types son los mismos
-                recorrer los 150 pokemon
-arreglar el coso ese que agrega px al back
-                media query more-info en <900
- */
 const pokemonInTheWeb = 12;
 $(document).ready(function () {
 
@@ -74,8 +61,8 @@ const pokemonInformation = (arrayOfPokemonObj) => {
 }
 
 
-const getPokemon = (id) => {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+const getPokemon = (id, name = undefined) => {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${id || name}`)
     .then(response => response.json())
 
 }
@@ -88,16 +75,19 @@ const getMultiplePokemon = (startIndex) => {
 
 }
 
-const showMoreInfo = (event) => {
+const showMoreInfo = (event, idOfPokemon = undefined, typeOfPokemon = undefined) => {
   console.log(`Cosas: `, evoluciones.responseJSON);
   $(".more-info").show()
   $('.pre-evolution').attr('src', `./gif/loading.gif`)
   $('.post-evolution').attr('src', `./gif/loading.gif`)
-  let id = event.target.id;
+  $(".description-more-info")[0].innerText = '...'
+  $($('.img-more-info')[0]).attr('src', `./gif/loading.gif`)
+
+  let id = idOfPokemon || event.target.id
   const evolucionesOfPokemon = evoluciones.responseJSON[id].evolutions[0]?.id
   console.log(`evol: `, evolucionesOfPokemon);
-  let classes = $(event.target).parent().attr('class');
-  type = classes.substr(0, classes.indexOf('-'));
+  let classes = $(event?.target).parent().attr('class');
+  type = typeOfPokemon || classes.substr(0, classes.indexOf('-'));
   $('.img-more-info').removeClass().addClass(`img-more-info ${type}`)
   $($('.img-more-info')[0]).attr('src', `https://pokeres.bastionbot.org/images/pokemon/${id}.png`)
   $('.background-more-info').removeClass().addClass(`background-more-info ${type}`)
@@ -108,7 +98,7 @@ const showMoreInfo = (event) => {
     $('.sin-evoluciones').hide()
     $('.pre-evolution').attr('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`)
     $('.post-evolution').attr('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolucionesOfPokemon}.png`)
-  }else{
+  } else {
 
     $('.sprites').hide()
     $('.sin-evoluciones').show()
@@ -120,4 +110,19 @@ const showMoreInfo = (event) => {
 
 const closeShowMoreInfo = () => {
   $(".more-info").hide()
+}
+
+const findPokemon = (event) => {
+  event.preventDefault()
+  const pokemonToFind = $('#findPokemonByIdOrName').val()
+  if (pokemonToFind >= 1 && pokemonToFind <= 151) {
+    getPokemon(pokemonToFind)
+      .then(pokemon => showMoreInfo(undefined, pokemonToFind, pokemon.types[0].type.name))
+  } else if (/^[a-z]+$/.test(pokemonToFind.toLowerCase())) {
+    getPokemon(null || pokemonToFind)
+      .then(pokemon => showMoreInfo(undefined, pokemon.id, pokemon.types[0].type.name))
+      .catch(() => alert('Nombre de pokemon incorrecto'))
+  } else {
+    alert('Id o nombre incorrectos')
+  }
 }
