@@ -1,1 +1,5 @@
 pokedex/
+node_modules/
+evoluciones.json
+obtenerEvolucion.js
+package-lock.json

@@ -3,12 +3,13 @@ to do:
 
                             cambiar el back
               agregar funcionalidad para cambiar los pokemonInTheWeb mostrados
-agregar more-info
+                        agregar more-info
 agregar funcionalidad de buscar por id (errores)
 agregar funcionalidad de buscar por nombre (errores)
                 orevisar type types son los mismos
                 recorrer los 150 pokemon
 arreglar el coso ese que agrega px al back
+                media query more-info en <900
  */
 const pokemonInTheWeb = 12;
 $(document).ready(function () {
@@ -21,6 +22,9 @@ $(document).ready(function () {
 
 
 });
+const evoluciones = $.getJSON('https://api.npoint.io/ab2c33f672da1f6e29a2', function (evoluciones) {
+  return evoluciones;
+})
 
 const previousPokemon = () => {
   const id = parseInt($(".pokemon-id")[0].innerText.substr(5)) - pokemonInTheWeb;
@@ -85,9 +89,30 @@ const getMultiplePokemon = (startIndex) => {
 }
 
 const showMoreInfo = (event) => {
+  console.log(`Cosas: `, evoluciones.responseJSON);
   $(".more-info").show()
-  const id = event.target.id;
-  $($(".img-more-info")[0]).attr('src', `https://pokeres.bastionbot.org/images/pokemon/${id}.png`)
+  $('.pre-evolution').attr('src', `./gif/loading.gif`)
+  $('.post-evolution').attr('src', `./gif/loading.gif`)
+  let id = event.target.id;
+  const evolucionesOfPokemon = evoluciones.responseJSON[id].evolutions[0]?.id
+  console.log(`evol: `, evolucionesOfPokemon);
+  let classes = $(event.target).parent().attr('class');
+  type = classes.substr(0, classes.indexOf('-'));
+  $('.img-more-info').removeClass().addClass(`img-more-info ${type}`)
+  $($('.img-more-info')[0]).attr('src', `https://pokeres.bastionbot.org/images/pokemon/${id}.png`)
+  $('.background-more-info').removeClass().addClass(`background-more-info ${type}`)
+  //Evolucion
+  if (evolucionesOfPokemon) {
+
+    $('.sprites').show()
+    $('.sin-evoluciones').hide()
+    $('.pre-evolution').attr('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`)
+    $('.post-evolution').attr('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolucionesOfPokemon}.png`)
+  }else{
+
+    $('.sprites').hide()
+    $('.sin-evoluciones').show()
+  }
   fetch(` https://pokeapi.co/api/v2/pokemon-species/${id}`)
     .then(data => data.json()
       .then(pokemonSpecie => $(".description-more-info")[0].innerText = pokemonSpecie.flavor_text_entries.filter(entry => entry.language.name === "es")[0].flavor_text))

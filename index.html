@@ -23,7 +23,7 @@
         </ul>
       </div>
       <form>
-        <input placeholder="ej pikachu o 12" type="text" name="pokemon" id="buscarPokemon">
+        <input placeholder="ej: pikachu o 12" type="text" name="pokemon" id="buscarPokemon">
         <button>Buscar pokemon</button>
       </form>
     </nav>
@@ -32,7 +32,7 @@
 
     <div class="more-info">
 
-      <div class="background-more-info water">
+      <div class="background-more-info ">
         <div class="top-more-info">
           <img class="img-more-info water" src="./gif/loading.gif" class="pokemon">
           <p class="description-more-info"> .... </p>
@@ -41,11 +41,12 @@
           <p class="evolution">Evoluciona:</p>
           <div class="sprites">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="pokemon"
-              class="sprite">
-            <p  class="arrow">&rarr;</p>
+              class="sprite pre-evolution">
+            <p class="arrow">&rarr;</p>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png" alt="pokemon"
-              class="sprite">
+              class="sprite post-evolution">
           </div>
+          <p class="sin-evoluciones">No tiene evoluciones</p>
         </div>
         <p onclick="closeShowMoreInfo()" class="close-more-info">X</p>
       </div>
@@ -327,6 +328,7 @@
     <p onclick="nextPokemon()" class="paginador "> &gt;</p>
   </footer>
 
+  <script type="text/javascript" src="evoluciones.json"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
 

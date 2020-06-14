@@ -85,6 +85,7 @@ form input:focus {
   display: none;
   justify-content: center;
   align-content: center;
+  margin: auto;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -100,7 +101,8 @@ form input:focus {
 }
 
 .background-more-info {
-  margin-top: 5%;
+  margin-top: 5rem;
+  margin-left: 20rem;
   height: 70%;
   width: 70%;
   background-color: silver;
@@ -127,6 +129,11 @@ form input:focus {
   display: flex;
 }
 
+
+.bottom-more-info {
+  margin: auto;
+}
+
 .description-more-info {
   padding: 1rem;
   align-self: center;
@@ -146,6 +153,15 @@ form input:focus {
 .sprites {
   display: flex;
   justify-content: center;
+}
+
+.sprite {
+  height: 6rem;
+}
+
+.sin-evoluciones {
+  display: none;
+  font-size: 4rem;
 }
 
 .container-of-pokemon {
@@ -201,8 +217,24 @@ form input:focus {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .background-more-info {
+    margin-left: 13rem;
+  }
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
+  .background-more-info {
+    margin-left: 5rem;
+  }
+  .top-more-info {
+    display: flex;
+    flex-direction: row;
+  }
+  .img-more-info{
+    margin: auto;
+  }
   .card-group {
     flex: 50%;
     margin: 1rem;
@@ -216,6 +248,30 @@ form input:focus {
   }
   .logo-links {
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .background-more-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 90%;
+  }
+  .img-more-info {
+    display: list-item;
+  }
+  .top-more-info {
+    background-color: #6f35fe;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400) {
+  .img-more-info {
+    height: 15rem;
+    width: 15rem;
   }
 }
 
@@ -245,7 +301,7 @@ footer {
   margin: auto;
   height: 200;
   width: 300;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
 }
 
 .flip-inner {
@@ -278,7 +334,7 @@ footer {
   transform: rotateY(180deg);
 }
 
-.img-shiny img{
+.img-shiny img {
   height: auto;
   width: 9rem;
 }
