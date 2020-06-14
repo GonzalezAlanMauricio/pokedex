@@ -76,7 +76,6 @@ const getMultiplePokemon = (startIndex) => {
 }
 
 const showMoreInfo = (event, idOfPokemon = undefined, typeOfPokemon = undefined) => {
-  console.log(`Cosas: `, evoluciones.responseJSON);
   $(".more-info").show()
   $('.pre-evolution').attr('src', `./gif/loading.gif`)
   $('.post-evolution').attr('src', `./gif/loading.gif`)
@@ -85,7 +84,6 @@ const showMoreInfo = (event, idOfPokemon = undefined, typeOfPokemon = undefined)
 
   let id = idOfPokemon || event.target.id
   const evolucionesOfPokemon = evoluciones.responseJSON[id].evolutions[0]?.id
-  console.log(`evol: `, evolucionesOfPokemon);
   let classes = $(event?.target).parent().attr('class');
   type = typeOfPokemon || classes.substr(0, classes.indexOf('-'));
   $('.img-more-info').removeClass().addClass(`img-more-info ${type}`)
