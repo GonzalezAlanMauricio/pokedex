@@ -210,7 +210,6 @@ form input:focus {
   }
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .card-group {
     flex: 50%;
@@ -223,7 +222,6 @@ form input:focus {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .background-more-info {
     margin-left: 5rem;
@@ -262,7 +260,6 @@ form input:focus {
     display: list-item;
   }
   .top-more-info {
-    background-color: #6f35fe;
     display: flex;
     flex-direction: column;
   }
